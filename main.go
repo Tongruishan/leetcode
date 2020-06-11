@@ -1,9 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+	"leetcode/model"
+)
 
 func main() {
-	testSum()
+	//GetTwoSum() //1
+	//testSum()   //2
+	JsonDemo()
+}
+
+func JsonDemo() {
+	t := model.JsonDemo{
+		Name:    "lanlan",
+		Age:     "18",
+		Address: "wojia",
+	}
+
+	tjson, _ := json.Marshal(t)
+
+	fmt.Println("tjson==", string(tjson))
 }
 
 //01.给定一个整数数组nums和一个目标值target，请你在数组中找出和为目标值的那两个整数，并返回他们的数组下标
