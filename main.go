@@ -149,6 +149,7 @@ func testSum() {
 
 }
 
+
 func httpTest() {
 	url := "http://www.baidu.com"
 
@@ -158,4 +159,8 @@ func httpTest() {
 		return
 	}
 	fmt.Println("resp.code=", resp.Status)
+}
+
+func demo(){
+	fmt.Println("hahahahahah")
 }
