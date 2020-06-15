@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 func main() {
-	testSum()
+	// testSum()
+	httpTest()
+
 }
 
 //01.给定一个整数数组nums和一个目标值target，请你在数组中找出和为目标值的那两个整数，并返回他们的数组下标
@@ -128,4 +133,15 @@ func testSum() {
 	l3 := AddTwoList(l1, l2)
 	Ergodic(l3)
 
+}
+
+func httpTest() {
+	url := "http://www.baidu.com"
+
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println("http.Get err", err)
+		return
+	}
+	fmt.Println("resp.code=", resp.Status)
 }
