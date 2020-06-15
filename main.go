@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"leetcode/model"
+	"net/http"
 )
 
 func main() {
@@ -146,4 +147,15 @@ func testSum() {
 	l3 := AddTwoList(l1, l2)
 	Ergodic(l3)
 
+}
+
+func httpTest() {
+	url := "http://www.baidu.com"
+
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println("http.Get err", err)
+		return
+	}
+	fmt.Println("resp.code=", resp.Status)
 }
