@@ -129,3 +129,8 @@ func testSum() {
 	Ergodic(l3)
 
 }
+
+
+func demo(){
+	fmt.Println("hahahahahah")
+}
